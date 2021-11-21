@@ -1,0 +1,17 @@
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Application.deps.json
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Application.dll
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\ref\BL.Application.dll
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Application.pdb
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Application.Contracts.dll
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Domain.dll
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Application.Contracts.pdb
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\BL.Domain.pdb
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.csproj.AssemblyReference.cache
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.AssemblyInfoInputs.cache
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.AssemblyInfo.cs
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.csproj.CoreCompileInputs.cache
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.csproj.CopyComplete
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.dll
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\ref\BL.Application.dll
+F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.pdb

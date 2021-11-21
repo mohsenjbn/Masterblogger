@@ -1,0 +1,21 @@
+﻿@page "{id:int}"
+@model BL.Presentation.Areas.Admin.Pages.ListCategory.EditModel
+@{
+}
+
+
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="hidden" asp-for="@Model.Category.id" />
+        <input  class="form-control" asp-for="@Model.Category.Title">
+        <div class="form-text">Please Enter Title</div>
+    </div>
+    <button type="submit" class="btn btn-primary float-left">Submit</button >
+    
+
+</form>
+
+<a asp-area="Admin" asp-page="./Index" class="btn btn-dark ">Back</a>
+
