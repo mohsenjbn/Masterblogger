@@ -15,7 +15,7 @@ namespace BL.Infrastracture.Repositories
         public void Create(Article entity)
         {
             _context.Articles.Add(entity);
-            _context.SaveChanges();
+            save();
         }
 
         public List<ArticleViewmodel> GetAll()
@@ -28,6 +28,16 @@ namespace BL.Infrastracture.Repositories
            Name=p.Name,
            CategoryName=p.category.Title
            }).ToList();
+        }
+
+        public Article GetBy(int id)
+        {
+            return _context.Articles.FirstOrDefault(p=>p.Id == id);
+        }
+
+        public void save()
+        {
+            _context.SaveChanges();
         }
     }
 }

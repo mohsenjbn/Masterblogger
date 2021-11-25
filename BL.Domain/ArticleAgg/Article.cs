@@ -33,5 +33,25 @@ namespace BL.Domain.ArticleAgg
             IsDeleted=false;
             CreationDate = DateTime.Now;
         }
+
+        public void Edit(string name, string shortdescribtion, string content, string image, int articlecategoryid)
+        {
+
+            Name = name;
+            ShortDescribtion = shortdescribtion;
+            Content = content;
+            Image = image;
+            ArticleCategoryId = articlecategoryid;
+        }
+
+        public void Delete()
+        {
+            IsDeleted=true;
+        }
+
+        public void Activate()
+        {
+            IsDeleted = false;
+        }
     }
 }

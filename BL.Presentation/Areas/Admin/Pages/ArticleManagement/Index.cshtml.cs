@@ -16,5 +16,17 @@ namespace BL.Presentation.Areas.Admin.Pages.AricleManagement
         {
             Articles=_articleApplication.GetArticles();
         }
+
+        public IActionResult OnGetDelete(int Id)
+        {
+           _articleApplication.DeleteArticle(Id);
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetActivate(int Id)
+        {
+            _articleApplication.ActivateArticle(Id);
+            return RedirectToPage("./Index");
+        }
     }
 }

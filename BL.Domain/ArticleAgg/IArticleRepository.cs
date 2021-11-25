@@ -7,5 +7,7 @@ namespace BL.Domain.ArticleAgg
     {
         List<ArticleViewmodel> GetAll();
         void Create(Article entity);
+        Article GetBy(int id);
+        void save();
     }
 }
