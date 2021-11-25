@@ -10,7 +10,7 @@ namespace BL.Domain.ArticleCategoryAgg
         public bool IsRemove { get; private set; }
         public DateTime CreationDate { get; private set; }
 
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<Article> Articles { get;private  set; }
 
         protected ArticleCategory()
         {
@@ -19,20 +19,16 @@ namespace BL.Domain.ArticleCategoryAgg
         public ArticleCategory(string title,IArticleCategoryValidator Validator)
         {
             Validator.ThisalreadyExistTitle(title);
-            CkechingNullTitle(title);
+            Validator.CkechingNullTitle(title);
             Title = title;
             CreationDate = DateTime.Now;
             IsRemove = false;
             Articles=new List<Article>();
         }
-        public void CkechingNullTitle(string title)
-        {
-            if (Title == null)
-                throw new ArgumentNullException();
-        }
+      
         public void Edit(string title)
         {
-            CkechingNullTitle(title);
+            
             Title = title;
         }
 

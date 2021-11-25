@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "BL.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BL.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.Application.Contracts.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BL.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../BL.Application.Contracts/BL.Application.Contracts.csproj",
+      "msbuildProject": "../BL.Application.Contracts/BL.Application.Contracts.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "BL.Application.Contracts >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mohsen\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj": {
+              "projectPath": "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

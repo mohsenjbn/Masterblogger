@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "BL.Infrastracture/1.0.0": {
         "dependencies": {
+          "BL.Application.Contracts": "1.0.0",
           "BL.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
@@ -484,7 +485,15 @@
           }
         }
       },
+      "BL.Application.Contracts/1.0.0": {
+        "runtime": {
+          "BL.Application.Contracts.dll": {}
+        }
+      },
       "BL.Domain/1.0.0": {
+        "dependencies": {
+          "BL.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "BL.Domain.dll": {}
         }
@@ -797,6 +806,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "BL.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BL.Domain/1.0.0": {
       "type": "project",

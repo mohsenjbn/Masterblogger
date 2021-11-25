@@ -10,5 +10,16 @@ namespace BL.Application
         {
             _articleRepository = articleRepository;
         }
+
+        public void CreateArticle(CreateArticle command)
+        {
+            var Article=new Article(command.Name,command.ShortDescribtion,command.Content,command.Image,command.ArticleCategoryId);
+            _articleRepository.Create(Article);
+        }
+
+        public List<ArticleViewmodel> GetArticles()
+        {
+            return _articleRepository.GetAll();
+        }
     }
 }

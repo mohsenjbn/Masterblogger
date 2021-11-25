@@ -467,12 +467,16 @@
         }
       },
       "BL.Domain/1.0.0": {
+        "dependencies": {
+          "BL.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "BL.Domain.dll": {}
         }
       },
       "BL.Infrastracture/1.0.0": {
         "dependencies": {
+          "BL.Application.Contracts": "1.0.0",
           "BL.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"

@@ -632,9 +632,22 @@
           }
         }
       },
+      "BL.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BL.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.Application.Contracts.dll": {}
+        }
+      },
       "BL.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BL.Application.Contracts": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BL.Domain.dll": {}
         },
@@ -1861,6 +1874,11 @@
         "version.txt"
       ]
     },
+    "BL.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../BL.Application.Contracts/BL.Application.Contracts.csproj",
+      "msbuildProject": "../BL.Application.Contracts/BL.Application.Contracts.csproj"
+    },
     "BL.Domain/1.0.0": {
       "type": "project",
       "path": "../BL.Domain/BL.Domain.csproj",
@@ -1869,6 +1887,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BL.Application.Contracts >= 1.0.0",
       "BL.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
@@ -1908,6 +1927,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj": {
+              "projectPath": "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj"
+            },
             "F:\\Project\\MasterBloger\\Solution1\\BL.Domain\\BL.Domain.csproj": {
               "projectPath": "F:\\Project\\MasterBloger\\Solution1\\BL.Domain\\BL.Domain.csproj"
             }

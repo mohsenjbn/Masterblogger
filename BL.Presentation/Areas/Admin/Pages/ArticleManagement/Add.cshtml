@@ -1,0 +1,35 @@
+﻿@page
+@model BL.Presentation.Areas.Admin.Pages.ArticleManagement.AddModel
+@{
+}
+
+
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input  class="form-control" name="Name" id="Name">
+
+        <label class="form-label">Image</label>
+        <input  class="form-control" name="Image" id="Image">
+
+        <label class="form-label">ShortDescribtion</label>
+        <textarea  class="form-control" name="ShortDescribtion" id="ShortDescribtion" rows="3" ></textarea>
+        
+        <label class="form-label">Content</label>
+        <textarea  class="form-control" name="Content" id="Content" rows="6" ></textarea>
+
+        <label class="form-label">ArticlCategory</label>
+       <select class="form-control" asp-items="@Model.Categories" name="ArticleCategoryId" value="ArticleCategoryId" >
+           <option value="0">Select Category</option>
+       </select>
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+
+</form>
+
+<a asp-area="Admin" asp-page="./Index" class="btn btn-dark">Back</a>
+
+

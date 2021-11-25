@@ -12,7 +12,12 @@ namespace BL.Domain.Services
             _articleCategoryRepository = articleCategpryRepository;
         }
 
-     
+        public void CkechingNullTitle(string title)
+        {
+            if (title == null)
+                throw new ArgumentNullException("title");
+        }
+
         public void ThisalreadyExistTitle(string title)
         {
             if (_articleCategoryRepository.Exist(title))

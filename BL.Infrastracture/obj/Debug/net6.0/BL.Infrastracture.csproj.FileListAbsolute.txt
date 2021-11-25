@@ -15,3 +15,5 @@ F:\Project\MasterBloger\Solution1\BL.Infrastracture\obj\Debug\net6.0\BL.Infrastr
 F:\Project\MasterBloger\Solution1\BL.Infrastracture\obj\Debug\net6.0\ref\BL.Infrastracture.dll
 F:\Project\MasterBloger\Solution1\BL.Infrastracture\obj\Debug\net6.0\BL.Infrastracture.pdb
 F:\Project\MasterBloger\Solution1\BL.Infrastracture\obj\Debug\net6.0\BL.Infrastracture.genruntimeconfig.cache
+F:\Project\MasterBloger\Solution1\BL.Infrastracture\bin\Debug\net6.0\BL.Application.Contracts.dll
+F:\Project\MasterBloger\Solution1\BL.Infrastracture\bin\Debug\net6.0\BL.Application.Contracts.pdb

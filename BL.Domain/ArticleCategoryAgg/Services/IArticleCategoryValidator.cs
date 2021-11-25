@@ -6,7 +6,10 @@ namespace BL.Domain.Services
     {
         void ThisalreadyExistTitle(string title);
 
-      
+        void CkechingNullTitle(string title);
+
+
+
 
 
     }

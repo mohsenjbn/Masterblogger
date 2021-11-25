@@ -21,6 +21,9 @@
         }
       },
       "BL.Domain/1.0.0": {
+        "dependencies": {
+          "BL.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "BL.Domain.dll": {}
         }

@@ -2,7 +2,7 @@ using BL.Application.Contracts.ArticleCategory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BL.Presentation.Areas.Admin.Pages.ListCategory
+namespace BL.Presentation.Areas.Admin.Pages.ListCategoryManagement
 {
     public class IndexModel : PageModel
     {

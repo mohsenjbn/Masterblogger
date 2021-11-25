@@ -1,0 +1,92 @@
+﻿@page
+@model BL.Presentation.Areas.Admin.Pages.AricleManagement.IndexModel
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="">
+            <table class="table table-responsive-xl">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>status</th>
+                        <th class="align-content-center">
+                            <a asp-area="Admin" asp-page="./Add">
+                                <button class=" btn-success col-12 ">Add</button>
+
+                            </a>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Articles)
+                    {
+                        <tr class="alert" role="alert">
+                            <td>@item.Id</td>
+                            <td class="d-flex align-items-center">
+                                <div class="img" style="background-image: url(@item.Image);"></div>
+                                <div class="pl-3 email">
+                                    <span>@item.Name</span>
+                                    <span>Added: @item.CreationDate</span>
+                                </div>
+                            </td>
+                            <td>@item.CategoryName</td>
+                        
+
+                            @if (item.IsDeleted == false)
+                            {
+                                <td class="status"><span class="active">Active</span></td>
+                            }
+                            else
+                            {
+                                <td class="status"><span class="waiting">Inactive</span></td>
+                            }
+
+                            <td>
+                                <div class="float-right">
+                                    @if (item.IsDeleted == false)
+                                    {
+
+                                        <a asp-page-handler="Delete" asp-route-Id="@item.Id">
+                                            <span><i class="fas fa-trash-alt " style="color:red"></i></span>
+
+                                        </a>
+
+
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-page-handler="Activate" asp-route-Id="@item.Id">
+                                            <span><i class="fas fa-undo" style="color:green"></i></span>
+                                        </a>
+
+                                    }
+
+
+
+
+                                </div>
+                                <div>
+                                    <a asp-page="./Edit" asp-route-id="@item.Id">
+                                        <span><i class="far fa-edit"></i></span>
+                                    </a>
+                                </div>
+
+
+                            </td>
+
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

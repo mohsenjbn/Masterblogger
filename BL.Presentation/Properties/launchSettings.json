@@ -13,12 +13,12 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "https://localhost:7101/Admin/ListCategory",
+      "launchUrl": "https://localhost:7101/Admin/ListCategoryManagement",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-        
 
-      },
+
+      }
 
     },
     "IIS Express": {

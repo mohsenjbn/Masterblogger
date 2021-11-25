@@ -16,7 +16,7 @@ namespace BL.Domain.ArticleAgg
         public int ArticleCategoryId { get; private set; }
 
 
-        public ArticleCategory category { get; set; }
+        public ArticleCategory category { get; private set; }
 
         protected Article()
         {

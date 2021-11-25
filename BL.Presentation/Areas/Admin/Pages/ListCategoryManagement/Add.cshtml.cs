@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BL.Presentation.Areas.Admin.Pages.ListCategory
+namespace BL.Presentation.Areas.Admin.Pages.ListCategoryManagement
 {
     public class AddModel : PageModel
     {
@@ -21,11 +21,7 @@ namespace BL.Presentation.Areas.Admin.Pages.ListCategory
 
         public IActionResult Onpost(ArticleCategoryCreate command )
         {
-            if (_articleCategoryApplication.IsExist(command.Title))
-            {
-                Error = "[pasid[pia[pd";
-            } 
-
+          
             _articleCategoryApplication.CreateCategory(command);
             return RedirectToPage("./Index");
         }

@@ -157,7 +157,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj": {
+                "projectPath": "F:\\Project\\MasterBloger\\Solution1\\BL.Application.Contracts\\BL.Application.Contracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
