@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Project\MasterBloger\Solution1\BL.Presentation
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/AricleManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcQXJpY2xlTWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -23,16 +27,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategory/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5XEFkZC5jc2h0bWw=
+[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategoryManagement/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5TWFuYWdlbWVudFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategory/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5XEVkaXQuY3NodG1s
+[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategoryManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5TWFuYWdlbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategory/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+[F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/ListCategoryManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcTGlzdENhdGVnb3J5TWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Project/MasterBloger/Solution1/BL.Presentation/Areas/Admin/Pages/Privacy.cshtml]

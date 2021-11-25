@@ -13,5 +13,8 @@
         void Delete(int id);
 
         void Activate(int id);
+
+        bool IsExist(string title);
+
     }
 }

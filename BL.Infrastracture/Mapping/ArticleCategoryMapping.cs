@@ -14,6 +14,9 @@ namespace BL.Infrastracture.Mapping
             builder.Property(p => p.CreationDate);
             builder.Property(p => p.IsRemove);
 
+
+            builder.HasMany(p=>p.Articles).WithOne(p=>p.category).HasForeignKey(p=>p.ArticleCategoryId);
+
         }
     }
 }

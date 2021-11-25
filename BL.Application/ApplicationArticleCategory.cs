@@ -80,5 +80,12 @@ namespace BL.Application
             return Category;
 
         }
+
+       
+
+        public bool IsExist(string title)
+        {
+            return _articleCategoryRepository.Exist(title);
+        }
     }
 }

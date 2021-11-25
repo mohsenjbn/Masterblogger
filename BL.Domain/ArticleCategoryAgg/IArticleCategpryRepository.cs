@@ -17,5 +17,7 @@ namespace BL.Domain.ArticleCategoryAgg
         ArticleCategory GetBy(int id);
 
         bool Exist(string title);
+
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿using BL.Domain.ArticleCategoryAgg;
-
+using BL.Domain.Exeptions;
 
 namespace BL.Domain.Services
 {
@@ -11,11 +11,12 @@ namespace BL.Domain.Services
         {
             _articleCategoryRepository = articleCategpryRepository;
         }
+
+     
         public void ThisalreadyExistTitle(string title)
         {
             if (_articleCategoryRepository.Exist(title))
-                throw new Exception();
-           
+                throw new DoblicatedTitleExeption($"this tile {title} aleaReady Exist");
         }
     }
 }
