@@ -68,3 +68,5 @@ F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\BL.Infrastrac
 F:\Project\MasterBloger\Solution1\BL.Presentation\obj\Debug\net6.0\BL.Presentation.csproj.CopyComplete
 F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\Humanizer.dll
 F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\BL.Infrastracture.Query.dll
+F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\BL.Infrastracture.Query.pdb

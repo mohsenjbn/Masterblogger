@@ -12,6 +12,7 @@
           "BL.Application.Contracts": "1.0.0",
           "BL.Domain": "1.0.0",
           "BL.Infrastracture": "1.0.0",
+          "BL.Infrastracture.Query": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "System.Configuration.ConfigurationManager": "6.0.0"
         },
@@ -484,6 +485,14 @@
         "runtime": {
           "BL.Infrastracture.dll": {}
         }
+      },
+      "BL.Infrastracture.Query/1.0.0": {
+        "dependencies": {
+          "BL.Infrastracture": "1.0.0"
+        },
+        "runtime": {
+          "BL.Infrastracture.Query.dll": {}
+        }
       }
     }
   },
@@ -789,6 +798,11 @@
       "sha512": ""
     },
     "BL.Infrastracture/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BL.Infrastracture.Query/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

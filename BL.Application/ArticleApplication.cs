@@ -1,14 +1,17 @@
 ﻿using BL.Application.Contracts.Article;
 using BL.Domain.ArticleAgg;
+using BL.Domain.ArticleAgg.Services;
 
 namespace BL.Application
 {
     public class ArticleApplication: IArticleApplication
     {
         private readonly IArticleRepository _articleRepository;
-        public ArticleApplication(IArticleRepository articleRepository)
+        private readonly IArticleValidator _articleValidator;
+        public ArticleApplication(IArticleRepository articleRepository, IArticleValidator articleValidator)
         {
             _articleRepository = articleRepository;
+              _articleValidator = articleValidator;
         }
 
         public void ActivateArticle(int id)
@@ -20,7 +23,7 @@ namespace BL.Application
 
         public void CreateArticle(CreateArticle command)
         {
-            var Article=new Article(command.Name,command.ShortDescribtion,command.Content,command.Image,command.ArticleCategoryId);
+            var Article=new Article(command.Name,command.ShortDescribtion,command.Content,command.Image,command.ArticleCategoryId,_articleValidator);
             _articleRepository.Create(Article);
         }
 

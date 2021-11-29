@@ -35,6 +35,11 @@ namespace BL.Infrastracture.Repositories
             return _context.Articles.FirstOrDefault(p=>p.Id == id);
         }
 
+        public bool IsExist(string name)
+        {
+          return  _context.Articles.Any(p=>p.Name == name);
+        }
+
         public void save()
         {
             _context.SaveChanges();

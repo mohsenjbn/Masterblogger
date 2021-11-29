@@ -1,5 +1,6 @@
 ﻿
 
+using BL.Domain.ArticleAgg.Services;
 using BL.Domain.ArticleCategoryAgg;
 
 namespace BL.Domain.ArticleAgg
@@ -23,26 +24,36 @@ namespace BL.Domain.ArticleAgg
 
         }
 
-        public Article(string name,string shortdescribtion,string content,string image,int articlecategoryid)
+        public Article(string name,string shortdescribtion,string content,string image,int articlecategoryid, IArticleValidator articleValidator)
         {
-            Name=name;
-            ShortDescribtion=shortdescribtion;
-            Content=content;
-            Image=image;
+            CkeckNullName(name);
+            articleValidator.IsDoblicationName(name);
+            Name = name;
+            ShortDescribtion = shortdescribtion;
+            Content = content;
+            Image = image;
             ArticleCategoryId = articlecategoryid;
-            IsDeleted=false;
+            IsDeleted = false;
             CreationDate = DateTime.Now;
+        }
+
+        private static void CkeckNullName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentNullException("name");
         }
 
         public void Edit(string name, string shortdescribtion, string content, string image, int articlecategoryid)
         {
-
+            CkeckNullName(name);
             Name = name;
             ShortDescribtion = shortdescribtion;
             Content = content;
             Image = image;
             ArticleCategoryId = articlecategoryid;
         }
+
+
 
         public void Delete()
         {

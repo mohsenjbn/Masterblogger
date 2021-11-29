@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using BL.Domain.Services;
 using BL.Domain.ArticleAgg;
 using BL.Application.Contracts.Article;
+using BL.Infrastracture.Query;
+using BL.Domain.ArticleAgg.Services;
 
 namespace BL.Infrastracture.Core
 {
@@ -20,7 +22,9 @@ namespace BL.Infrastracture.Core
             services.AddTransient<IArticleCategoryValidator, ArticleCategoryValidator>();
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
+            services.AddTransient<IArticleValidator, ArticleValidator>();
 
+            services.AddTransient<IArticleQuery, ArticleQuery>();
 
             services.AddDbContext<BlogContext>(options=>options.UseSqlServer(connectionstring));
         }

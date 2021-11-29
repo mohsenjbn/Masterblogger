@@ -691,6 +691,7 @@
           "BL.Application.Contracts": "1.0.0",
           "BL.Domain": "1.0.0",
           "BL.Infrastracture": "1.0.0",
+          "BL.Infrastracture.Query": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "System.Configuration.ConfigurationManager": "6.0.0"
         },
@@ -699,6 +700,19 @@
         },
         "runtime": {
           "bin/placeholder/BL.Infrastracture.Core.dll": {}
+        }
+      },
+      "BL.Infrastracture.Query/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BL.Infrastracture": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.Infrastracture.Query.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.Infrastracture.Query.dll": {}
         }
       }
     }
@@ -1899,6 +1913,11 @@
       "type": "project",
       "path": "../BL.Infrastracture.Core/BL.Infrastracture.Core.csproj",
       "msbuildProject": "../BL.Infrastracture.Core/BL.Infrastracture.Core.csproj"
+    },
+    "BL.Infrastracture.Query/1.0.0": {
+      "type": "project",
+      "path": "../BL.Infrastracture.Query/BL.Infrastracture.Query.csproj",
+      "msbuildProject": "../BL.Infrastracture.Query/BL.Infrastracture.Query.csproj"
     }
   },
   "projectFileDependencyGroups": {

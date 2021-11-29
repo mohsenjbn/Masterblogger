@@ -19,3 +19,5 @@ F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\obj\Debug\net6.0\BL.Inf
 F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\obj\Debug\net6.0\BL.Infrastracture.Core.dll
 F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\obj\Debug\net6.0\ref\BL.Infrastracture.Core.dll
 F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\obj\Debug\net6.0\BL.Infrastracture.Core.pdb
+F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\bin\Debug\net6.0\BL.Infrastracture.Query.dll
+F:\Project\MasterBloger\Solution1\BL.Infrastracture.Core\bin\Debug\net6.0\BL.Infrastracture.Query.pdb

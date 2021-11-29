@@ -9,5 +9,7 @@ namespace BL.Domain.ArticleAgg
         void Create(Article entity);
         Article GetBy(int id);
         void save();
+
+        bool IsExist(string name);
     }
 }

@@ -4,8 +4,7 @@ using BL.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BL.Application
 {
@@ -13,6 +12,7 @@ namespace BL.Application
     {
         private readonly IArticleCategpryRepository _articleCategoryRepository;
         private readonly IArticleCategoryValidator _articleCategpryValidator;
+      
         public ApplicationArticleCategory(IArticleCategpryRepository articleCategpryRepository,IArticleCategoryValidator articleCategoryValidator)
         {
             _articleCategoryRepository = articleCategpryRepository;

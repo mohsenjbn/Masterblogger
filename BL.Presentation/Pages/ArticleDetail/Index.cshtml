@@ -1,0 +1,60 @@
+﻿@page "{id:int}"
+@model BL.Presentation.Pages.ArticleDetai.IndexModel
+@{
+}
+
+
+<div class="row">
+
+    <!-- Begin Fixed Left Share -->
+    <div class="col-md-2 col-xs-12">
+
+        <ul>
+            <li>
+                <a href="#comments">
+                    42<br>
+                </a>
+            </li>
+            <li>
+                @Model.Article.CreationDate
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- End Fixed Left Share -->
+<!-- Begin Post -->
+<div class="col-md-8 col-md-offset-2 col-xs-12">
+    <div class="mainheading">
+
+
+        <h1 class="posttitle">@Model.Article.Name</h1>
+
+    </div>
+
+    <!-- Begin Featured Image -->
+    <img class="featured-image img-fluid" src="@Model.Article.Image" alt="@Model.Article.Name" title="@Model.Article.Name">
+    <!-- End Featured Image -->
+    <!-- Begin Post Content -->
+    <div class="article-post">
+        <p>
+            @Model.Article.ShortDescribtion
+        </p>
+
+        <blockquote>
+            @Model.Article.Content
+        </blockquote>
+
+    </div>
+    <!-- End Post Content -->
+    <!-- Begin Tags -->
+    <div class="after-post-tags">
+        <ul class="tags">
+            <li><a >@Model.Article.CategoryName</a></li>
+         
+        </ul>
+    </div>
+    <!-- End Tags -->
+
+</div>
+<!-- End Post -->
+    </div>
