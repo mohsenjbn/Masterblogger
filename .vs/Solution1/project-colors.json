@@ -45,7 +45,12 @@
       "ProjectGuid": "133ed74e-41f1-4e56-b39a-2647d7d9a36c",
       "DisplayName": "BL.Infrastracture.Core",
       "ColorIndex": 7
+    },
+    "684df09f-9731-4b5a-acdb-6ffdbea6ba0c": {
+      "ProjectGuid": "684df09f-9731-4b5a-acdb-6ffdbea6ba0c",
+      "DisplayName": "BL.Infrastracture.Query",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }

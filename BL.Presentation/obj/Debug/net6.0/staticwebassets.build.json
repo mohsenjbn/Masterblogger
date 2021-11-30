@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kpUusEzGJ+LKqAfiDyqR9RcebEbr6QJWhK7E9Bdr1pE=",
+  "Hash": "nIgo5wfif2mBMcCiTCYaJLHJQrS0ftSUWSDHcea5xUg=",
   "Source": "BL.Presentation",
   "BasePath": "_content/BL.Presentation",
   "Mode": "Default",
@@ -1001,6 +1001,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "F:\\Project\\MasterBloger\\Solution1\\BL.Presentation\\wwwroot\\style.css",
+      "SourceId": "BL.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Project\\MasterBloger\\Solution1\\BL.Presentation\\wwwroot\\",
+      "BasePath": "_content/BL.Presentation",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ]
 }

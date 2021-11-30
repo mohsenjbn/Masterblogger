@@ -3,58 +3,104 @@
 @{
 }
 
+    <link href="~/style.css" rel="stylesheet">
 
-<div class="row">
+<div class="col-md-9 technology-right">
+			<div class="agileinfo">
+          
+		  <h2 class="w3">@Model.Article.Name</h2>
+			<div class="single">
+			   <img src="@Model.Article.Image" class="img-responsive" alt="@Model.Article.Name" style="max-width:675px">
+			    <div class="b-bottom"> 
+			      <h5 class="top">@Model.Article.CategoryName</h5>
+				   <p class="sub">@Model.Article.ShortDescribtion</p>				   
+				   <p class="sub">@Model.Article.Content</p>
 
-    <!-- Begin Fixed Left Share -->
-    <div class="col-md-2 col-xs-12">
+			      <p>On Aug 01 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
+				 
+				</div>
 
-        <ul>
-            <li>
-                <a href="#comments">
-                    42<br>
-                </a>
-            </li>
-            <li>
-                @Model.Article.CreationDate
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- End Fixed Left Share -->
-<!-- Begin Post -->
-<div class="col-md-8 col-md-offset-2 col-xs-12">
-    <div class="mainheading">
+			 </div>
+			  
 
-
-        <h1 class="posttitle">@Model.Article.Name</h1>
-
-    </div>
-
-    <!-- Begin Featured Image -->
-    <img class="featured-image img-fluid" src="@Model.Article.Image" alt="@Model.Article.Name" title="@Model.Article.Name">
-    <!-- End Featured Image -->
-    <!-- Begin Post Content -->
-    <div class="article-post">
-        <p>
-            @Model.Article.ShortDescribtion
-        </p>
-
-        <blockquote>
-            @Model.Article.Content
-        </blockquote>
-
-    </div>
-    <!-- End Post Content -->
-    <!-- Begin Tags -->
-    <div class="after-post-tags">
-        <ul class="tags">
-            <li><a >@Model.Article.CategoryName</a></li>
-         
-        </ul>
-    </div>
-    <!-- End Tags -->
-
-</div>
-<!-- End Post -->
-    </div>
+						<div class="response">
+					<h4>
+پاسخ</h4>
+					<div class="media response-info">
+						<div class="media-right response-text-right">
+							<a href="#">
+								<img src="images/sin1.jpg" class="img-responsive" alt="">
+							</a>
+						</div>
+						<div class="media-body response-text-left">
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+							<ul>
+								<li>Jun 21, 2016</li>
+								<li><a href="#">
+پاسخ</a></li>
+							</ul>
+							<div class="media response-info">
+								<div class="media-right response-text-right">
+									<a href="#">
+										<img src="images/sin2.jpg" class="img-responsive" alt="">
+									</a>
+								</div>
+								<div class="media-body response-text-left">
+									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+									<ul>
+										<li>July 17, 2016</li>
+										<li><a href="#">
+پاسخ</a></li>
+									</ul>		
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="media response-info">
+						<div class="media-right response-text-right">
+							<a href="#">
+								<img src="images/sin1.jpg" class="img-responsive" alt="">
+							</a>
+						</div>
+						<div class="media-body response-text-left">
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+							<ul>
+								<li>Jul 22, 2016</li>
+								<li><a href="#">
+پاسخ</a></li>
+							</ul>
+							<div class="media response-info">
+								<div class="media-right response-text-right">
+									<a href="#">
+										<img src="images/sin2.jpg" class="img-responsive" alt="">
+									</a>
+								</div>
+								<div class="media-body response-text-left">
+									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+									<ul>
+										<li>Aug 01, 2016</li>
+										<li><a href="#">
+پاسخ</a></li>
+									</ul>		
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>	
+				<div class="coment-form">
+					<h4>نظرات</h4>
+					<form action="#" method="post">
+						<input type="text" value="نام" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+						<input type="email" value="ایمیل" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+						<input type="text" value="وب سایت" name="websie" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Website';}" required="">
+						<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">پیام...</textarea>
+						<input type="submit" value="ارسال">
+					</form>
+				</div>	
+				<div class="clearfix"></div>
+			</div>
+		</div>
