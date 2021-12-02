@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL.Presentation", "BL.Prese
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL.Infrastracture.Core", "BL.Infrastracture.Core\BL.Infrastracture.Core.csproj", "{133ED74E-41F1-4E56-B39A-2647D7D9A36C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Infrastracture.Query", "BL.Infrastracture.Query\BL.Infrastracture.Query.csproj", "{684DF09F-9731-4B5A-ACDB-6FFDBEA6BA0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL.Infrastracture.Query", "BL.Infrastracture.Query\BL.Infrastracture.Query.csproj", "{684DF09F-9731-4B5A-ACDB-6FFDBEA6BA0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

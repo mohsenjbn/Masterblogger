@@ -10,6 +10,8 @@ using BL.Domain.ArticleAgg;
 using BL.Application.Contracts.Article;
 using BL.Infrastracture.Query;
 using BL.Domain.ArticleAgg.Services;
+using BL.Domain.CommentAgg;
+using BL.Application.Contracts.Comment;
 
 namespace BL.Infrastracture.Core
 {
@@ -23,6 +25,11 @@ namespace BL.Infrastracture.Core
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
             services.AddTransient<IArticleValidator, ArticleValidator>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<ICommentApplication, CommentApplication>();
+
+
+
 
             services.AddTransient<IArticleQuery, ArticleQuery>();
 

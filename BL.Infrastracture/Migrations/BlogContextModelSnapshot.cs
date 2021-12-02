@@ -85,6 +85,42 @@ namespace BL.Infrastracture.Migrations
                     b.ToTable("ArticleCategories", (string)null);
                 });
 
+            modelBuilder.Entity("BL.Domain.CommentAgg.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ArticleId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArticleId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("BL.Domain.ArticleAgg.Article", b =>
                 {
                     b.HasOne("BL.Domain.ArticleCategoryAgg.ArticleCategory", "category")
@@ -94,6 +130,22 @@ namespace BL.Infrastracture.Migrations
                         .IsRequired();
 
                     b.Navigation("category");
+                });
+
+            modelBuilder.Entity("BL.Domain.CommentAgg.Comment", b =>
+                {
+                    b.HasOne("BL.Domain.ArticleAgg.Article", "Article")
+                        .WithMany("Comments")
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
+                });
+
+            modelBuilder.Entity("BL.Domain.ArticleAgg.Article", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("BL.Domain.ArticleCategoryAgg.ArticleCategory", b =>

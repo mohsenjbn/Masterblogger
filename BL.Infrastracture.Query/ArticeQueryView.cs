@@ -9,6 +9,9 @@
         public string Content { get; set; }
         public string CreationDate { get; set; }
         public string CategoryName { get; set; }
+        public int Commentcount { get; set; }
+
+        public List<CommentQueryView> Comments { get; set; }
 
     }
 }

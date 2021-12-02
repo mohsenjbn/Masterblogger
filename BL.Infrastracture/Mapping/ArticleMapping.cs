@@ -19,7 +19,7 @@ namespace BL.Infrastracture.Mapping
             builder.Property(x => x.IsDeleted).IsRequired();
 
             builder.HasOne(p => p.category).WithMany(p => p.Articles).HasForeignKey(p => p.ArticleCategoryId);
-
+            builder.HasMany(p=>p.Comments).WithOne(p=>p.Article).HasForeignKey(p => p.ArticleId);
 
         }
     }

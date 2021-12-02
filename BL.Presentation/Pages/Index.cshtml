@@ -29,7 +29,8 @@
 
                                     <span class="author-meta">
                                         <span class="post-name"><a asp-page="/ArticleDetail/Index" asp-route-id="@article.Id">@article.CategoryName</a></span><br />
-                                        <span class="post-date">@article.CreationDate</span><span class="dot"></span><span class="post-read">@article.CreationDate</span>
+                                        <span class="post-date">@article.CreationDate</span><span class="dot "></span><span class="post-read " style="color:red">Comment:@article.Commentcount</span>
+
                                     </span>
                                 </div>
                             </div>

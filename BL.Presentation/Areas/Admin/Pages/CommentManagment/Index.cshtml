@@ -1,0 +1,97 @@
+﻿@page
+@using BL.Domain.CommentAgg
+@model BL.Presentation.Areas.Admin.Pages.CommentManagment.IndexModel
+@{
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <table class="table table-responsive-xl">
+                        <thead>
+                            <tr>
+
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>NameArticle</th>
+                                <th>Message</th>
+                                <th>Status</th>
+
+
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody >
+                            @foreach (var item in Model.Comments)
+                            {
+                                <tr class="alert" role="alert">
+                                    <td>@item.Id </td>
+
+                                    <td class="d-flex align-items-center">
+                                        <div class="pl-3 email">
+                                            <span>@item.Name</span>
+                                            <span>@item.CreationDate</span>
+                                        </div>
+                                    </td>
+                                    <td>@item.Email </td>
+                                    <td>@item.ArticleName </td>
+                                    <td>@item.Message </td>
+
+                                    @if (item.Status == Statuses.New)
+                                    {
+                                        <td class="status"><span class="active">New</span></td>
+                                    }
+                                    @if (item.Status == Statuses.Confirm)
+                                    {
+                                        <td class="status"><span class="active">Confimed</span></td>
+                                    }
+                                    @if (item.Status == Statuses.Canceld)
+                                    {
+                                        <td class="status"><span class="waiting" style="color:red">Canceld</span></td>
+                                    }
+                                    <td >
+                                        <div>
+                                            @if (item.Status == Statuses.New)
+                                            {
+                                               
+                                                    <a asp-page-handler="Confirm" asp-route-Id="@item.Id" >
+                                                        <span><i class="fas fa-eye " style="color:green"></i></span>
+
+                                                    </a>
+
+                                                    <a asp-page-handler="Cancel" asp-route-Id="@item.Id">
+                                                        <span><i class="fas fa-comment-slash" style="color:red"></i></span>
+                                                    </a>
+                                                
+
+                                            }
+
+                                        </div>
+
+
+
+
+
+
+
+
+                                    </td>
+
+
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

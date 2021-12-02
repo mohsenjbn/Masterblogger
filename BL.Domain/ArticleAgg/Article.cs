@@ -16,6 +16,7 @@ namespace BL.Domain.ArticleAgg
         public string Image { get; private set; }
         public int ArticleCategoryId { get; private set; }
 
+        public ICollection<CommentAgg.Comment> Comments { get; private set; }
 
         public ArticleCategory category { get; private set; }
 
@@ -35,6 +36,7 @@ namespace BL.Domain.ArticleAgg
             ArticleCategoryId = articlecategoryid;
             IsDeleted = false;
             CreationDate = DateTime.Now;
+            Comments=new List<CommentAgg.Comment>();
         }
 
         private static void CkeckNullName(string name)

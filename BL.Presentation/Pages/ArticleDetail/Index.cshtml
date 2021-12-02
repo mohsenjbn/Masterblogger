@@ -3,104 +3,60 @@
 @{
 }
 
-    <link href="~/style.css" rel="stylesheet">
+<link href="~/style.css" rel="stylesheet">
 
 <div class="col-md-9 technology-right">
-			<div class="agileinfo">
+    <div class="agileinfo">
+
+        <h2 class="w3">@Model.Article.Name</h2>
+        <div class="single">
+            <img src="@Model.Article.Image" class="img-responsive" alt="@Model.Article.Name" style="max-width:675px">
+            <div class="b-bottom">
+                <h5 class="top">@Model.Article.Name</h5>
+                <p class="sub">@Model.Article.ShortDescribtion</p>
+                <p class="sub">@Model.Article.Content</p>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="response">
+            <h4>
+                (@Model.Article.Commentcount)Commnts
+            </h4>
+
+           <div >
           
-		  <h2 class="w3">@Model.Article.Name</h2>
-			<div class="single">
-			   <img src="@Model.Article.Image" class="img-responsive" alt="@Model.Article.Name" style="max-width:675px">
-			    <div class="b-bottom"> 
-			      <h5 class="top">@Model.Article.CategoryName</h5>
-				   <p class="sub">@Model.Article.ShortDescribtion</p>				   
-				   <p class="sub">@Model.Article.Content</p>
+                
+               @foreach (var item in Model.Article.Comments)
+               {
+                <h1>@item.Name</h1>
+                <p>@item.Message</p>
+                <h4>@item.CreationDate</h4>
+                              <div class="clearfix"> </div>     
 
-			      <p>On Aug 01 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
-				 
-				</div>
+               }
+             
+                <div class="media-body response-text-left">
+                    
+            </div>
+                    
+               
+           
+        </div>
+        <div class="coment-form">
+            <h4>AddComment</h4>
+            <form method="post">
+                <input type="text" name="Name" placeholder="Name" id="Name">
+                <input type="email" name="Email" placeholder="Email" id="Email">
+                <textarea type="text" name="Message" placeholder="Message" id="Message"></textarea>
+                <input type="hidden" name="ArticleId" value="@Model.Article.Id" />
 
-			 </div>
-			  
-
-						<div class="response">
-					<h4>
-پاسخ</h4>
-					<div class="media response-info">
-						<div class="media-right response-text-right">
-							<a href="#">
-								<img src="images/sin1.jpg" class="img-responsive" alt="">
-							</a>
-						</div>
-						<div class="media-body response-text-left">
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-							<ul>
-								<li>Jun 21, 2016</li>
-								<li><a href="#">
-پاسخ</a></li>
-							</ul>
-							<div class="media response-info">
-								<div class="media-right response-text-right">
-									<a href="#">
-										<img src="images/sin2.jpg" class="img-responsive" alt="">
-									</a>
-								</div>
-								<div class="media-body response-text-left">
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-									<ul>
-										<li>July 17, 2016</li>
-										<li><a href="#">
-پاسخ</a></li>
-									</ul>		
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="media response-info">
-						<div class="media-right response-text-right">
-							<a href="#">
-								<img src="images/sin1.jpg" class="img-responsive" alt="">
-							</a>
-						</div>
-						<div class="media-body response-text-left">
-							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-							<ul>
-								<li>Jul 22, 2016</li>
-								<li><a href="#">
-پاسخ</a></li>
-							</ul>
-							<div class="media response-info">
-								<div class="media-right response-text-right">
-									<a href="#">
-										<img src="images/sin2.jpg" class="img-responsive" alt="">
-									</a>
-								</div>
-								<div class="media-body response-text-left">
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-									<ul>
-										<li>Aug 01, 2016</li>
-										<li><a href="#">
-پاسخ</a></li>
-									</ul>		
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>	
-				<div class="coment-form">
-					<h4>نظرات</h4>
-					<form action="#" method="post">
-						<input type="text" value="نام" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-						<input type="email" value="ایمیل" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-						<input type="text" value="وب سایت" name="websie" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Website';}" required="">
-						<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">پیام...</textarea>
-						<input type="submit" value="ارسال">
-					</form>
-				</div>	
-				<div class="clearfix"></div>
-			</div>
-		</div>
+                <input type="submit" value="send">
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
