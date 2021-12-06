@@ -605,6 +605,19 @@
           }
         }
       },
+      "01.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01.Framework.dll": {}
+        }
+      },
       "BL.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -633,6 +646,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "01.Framework": "1.0.0",
           "BL.Application.Contracts": "1.0.0"
         },
         "compile": {
@@ -1813,6 +1827,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "01.Framework/1.0.0": {
+      "type": "project",
+      "path": "../01.Framework/01.Framework.csproj",
+      "msbuildProject": "../01.Framework/01.Framework.csproj"
     },
     "BL.Application/1.0.0": {
       "type": "project",

@@ -20,7 +20,7 @@ namespace BL.Domain.Services
 
         public void ThisalreadyExistTitle(string title)
         {
-            if (_articleCategoryRepository.Exist(title))
+            if(_articleCategoryRepository.Exist(p=>p.Title==title))
                 throw new DoblicatedTitleExeption($"this tile {title} aleaReady Exist");
         }
     }

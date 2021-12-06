@@ -21,7 +21,7 @@ namespace BL.Domain.ArticleAgg.Services
         }
         public void IsDoblicationName(string name)
         {
-            if (_articleRepository.IsExist(name))
+            if (_articleRepository.Exist(p=>p.Name==name))
                 throw new Exception();
         }
     }

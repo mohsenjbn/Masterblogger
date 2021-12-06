@@ -1,18 +1,13 @@
-﻿using BL.Application.Contracts.Comment;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _01.Framework.Repository;
+using BL.Application.Contracts.Comment;
+
 
 namespace BL.Domain.CommentAgg
 {
-    public interface  ICommentRepository
+    public interface  ICommentRepository: IRepository<int, Comment>
     {
-        void AddComment(Comment entity);
 
-        Comment GetCommentby(int id);
-        List<CommentViewModel> GetAll();
+        List<CommentViewModel> GetList();
         void save();
     }
 }

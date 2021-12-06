@@ -1,24 +1,19 @@
-﻿using BL.Application.Contracts.Article;
+﻿using _01.Framework.Repository;
+using BL.Application.Contracts.Article;
 using BL.Domain.ArticleAgg;
 using Microsoft.EntityFrameworkCore;
 
 namespace BL.Infrastracture.Repositories
 {
-    public class ArticleRepository:IArticleRepository
+    public class ArticleRepository: BaseRepository<int,Article>,IArticleRepository
     {
         private readonly BlogContext _context;
-        public ArticleRepository(BlogContext context)
+        public ArticleRepository(BlogContext context):base(context)
         {
             _context = context;
         }
 
-        public void Create(Article entity)
-        {
-            _context.Articles.Add(entity);
-            save();
-        }
-
-        public List<ArticleViewmodel> GetAll()
+        public List<ArticleViewmodel> GetList()
         {
            return _context.Articles.Include(p=>p.category).Select(p=>new ArticleViewmodel { 
            Id = p.Id,
@@ -30,15 +25,7 @@ namespace BL.Infrastracture.Repositories
            }).ToList();
         }
 
-        public Article GetBy(int id)
-        {
-            return _context.Articles.FirstOrDefault(p=>p.Id == id);
-        }
-
-        public bool IsExist(string name)
-        {
-          return  _context.Articles.Any(p=>p.Name == name);
-        }
+      
 
         public void save()
         {

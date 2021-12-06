@@ -1,4 +1,5 @@
-﻿using BL.Application.Contracts.ArticleCategory;
+﻿using _01.Framework.Repository;
+using BL.Application.Contracts.ArticleCategory;
 using BL.Domain.ArticleCategoryAgg;
 using BL.Domain.Services;
 using System;
@@ -10,42 +11,49 @@ namespace BL.Application
 {
     public class ApplicationArticleCategory : IArticleCategoryApplication
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IArticleCategpryRepository _articleCategoryRepository;
         private readonly IArticleCategoryValidator _articleCategpryValidator;
       
-        public ApplicationArticleCategory(IArticleCategpryRepository articleCategpryRepository,IArticleCategoryValidator articleCategoryValidator)
+        public ApplicationArticleCategory(IArticleCategpryRepository articleCategpryRepository,IArticleCategoryValidator articleCategoryValidator, IUnitOfWork unitOfWork)
         {
             _articleCategoryRepository = articleCategpryRepository;
             _articleCategpryValidator = articleCategoryValidator;
+            _unitOfWork= unitOfWork;
         }
 
         public void Activate(int id)
         {
+            _unitOfWork.BeginTran();
             var ArticleCategory=  _articleCategoryRepository.GetBy(id);
             ArticleCategory.Activate();
-            _articleCategoryRepository.save();
+            _unitOfWork.CommitTran();
+            
         }
 
         public void CreateCategory(ArticleCategoryCreate command)
         {
+            _unitOfWork.BeginTran();
             var category = new ArticleCategory(command.Title,_articleCategpryValidator);
 
-            _articleCategoryRepository.Add(category);
-
+            _articleCategoryRepository.Create(category);
+            _unitOfWork.CommitTran();
         }
 
         public void Delete(int id)
         {
+            _unitOfWork.BeginTran();
             var ArticleCategory = _articleCategoryRepository.GetBy(id);
             ArticleCategory.Remove();
-            _articleCategoryRepository.save();
+            _unitOfWork.CommitTran();
         }
 
         public void Edit(EditCategory command)
         {
+            _unitOfWork.BeginTran();
             var Category = _articleCategoryRepository.GetBy(command.id);
             Category.Edit(command.Title);
-            _articleCategoryRepository.save();
+            _unitOfWork.CommitTran();
         }
 
         public List<ArticleCategoryViewModel> Get()
@@ -83,9 +91,6 @@ namespace BL.Application
 
        
 
-        public bool IsExist(string title)
-        {
-            return _articleCategoryRepository.Exist(title);
-        }
+     
     }
 }

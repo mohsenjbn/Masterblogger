@@ -1,14 +1,13 @@
-﻿using BL.Domain.ArticleAgg;
+﻿using _01.Framework.Domain;
+using BL.Domain.ArticleAgg;
 using BL.Domain.Services;
 
 namespace BL.Domain.ArticleCategoryAgg
 {
-    public class ArticleCategory
+    public class ArticleCategory:DomainBase<int>
     {
-        public int Id { get; private set; }
         public string Title { get; private set; }
         public bool IsRemove { get; private set; }
-        public DateTime CreationDate { get; private set; }
 
         public ICollection<Article> Articles { get;private  set; }
 
@@ -21,7 +20,6 @@ namespace BL.Domain.ArticleCategoryAgg
             Validator.ThisalreadyExistTitle(title);
             Validator.CkechingNullTitle(title);
             Title = title;
-            CreationDate = DateTime.Now;
             IsRemove = false;
             Articles=new List<Article>();
         }

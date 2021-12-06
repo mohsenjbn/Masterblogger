@@ -15,3 +15,5 @@ F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application
 F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.dll
 F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\ref\BL.Application.dll
 F:\Project\MasterBloger\Solution1\BL.Application\obj\Debug\net6.0\BL.Application.pdb
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\01.Framework.dll
+F:\Project\MasterBloger\Solution1\BL.Application\bin\Debug\net6.0\01.Framework.pdb

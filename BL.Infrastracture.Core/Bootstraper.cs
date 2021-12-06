@@ -12,6 +12,7 @@ using BL.Infrastracture.Query;
 using BL.Domain.ArticleAgg.Services;
 using BL.Domain.CommentAgg;
 using BL.Application.Contracts.Comment;
+using _01.Framework.Repository;
 
 namespace BL.Infrastracture.Core
 {
@@ -28,7 +29,7 @@ namespace BL.Infrastracture.Core
             services.AddTransient<ICommentRepository, CommentRepository>();
             services.AddTransient<ICommentApplication, CommentApplication>();
 
-
+            services.AddTransient<IUnitOfWork,UnitOfWorkEf>();
 
 
             services.AddTransient<IArticleQuery, ArticleQuery>();

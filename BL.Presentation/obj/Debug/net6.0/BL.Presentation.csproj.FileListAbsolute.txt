@@ -70,3 +70,5 @@ F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\Humanizer.dll
 F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\BL.Infrastracture.Query.dll
 F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\BL.Infrastracture.Query.pdb
+F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\01.Framework.dll
+F:\Project\MasterBloger\Solution1\BL.Presentation\bin\Debug\net6.0\01.Framework.pdb

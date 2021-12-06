@@ -1,15 +1,14 @@
-﻿using BL.Domain.ArticleAgg;
+﻿using _01.Framework.Domain;
+using BL.Domain.ArticleAgg;
 
 
 namespace BL.Domain.CommentAgg
 {
-    public class Comment
+    public class Comment: DomainBase<int>
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
         public string Email { get; private set; }
         public string Message { get; private set; }
-        public DateTime CreationDate { get; private set; }
         public int ArticleId { get; private set; }
         public int Status { get;private set; }
 

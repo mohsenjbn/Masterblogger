@@ -1,18 +1,17 @@
 ﻿
 
+using _01.Framework.Domain;
 using BL.Domain.ArticleAgg.Services;
 using BL.Domain.ArticleCategoryAgg;
 
 namespace BL.Domain.ArticleAgg
 {
-    public class Article
+    public class Article:DomainBase<int>
     {
-        public int Id { get; private set; }
         public string Name { get; private set;}
         public string ShortDescribtion { get; private set; }
         public string Content { get; private set; }
         public bool IsDeleted { get; private set; }
-        public DateTime CreationDate { get; private set; }
         public string Image { get; private set; }
         public int ArticleCategoryId { get; private set; }
 
@@ -35,7 +34,6 @@ namespace BL.Domain.ArticleAgg
             Image = image;
             ArticleCategoryId = articlecategoryid;
             IsDeleted = false;
-            CreationDate = DateTime.Now;
             Comments=new List<CommentAgg.Comment>();
         }
 
